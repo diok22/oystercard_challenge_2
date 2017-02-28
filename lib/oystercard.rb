@@ -9,7 +9,7 @@ class Oystercard
   end
 
   def top_up(money)
-    raise 'Top up balance cannot exceed 90 pounds' if @balance + money > MAXIMUM_BALANCE
+    raise "Top up balance cannot exceed #{MAXIMUM_BALANCE} pounds" if @balance + money > MAXIMUM_BALANCE
     @balance += money
   end
 
